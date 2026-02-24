@@ -1,17 +1,15 @@
 # Simple Todo App
-
-Give a brief description of the project here. Feel free to give it a different name.
-
+A Todo add that helps you made lists.
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+You can add tasks, delete, set a certain date and check your todos off.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+HTML, CSS, Javascript
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- https://github.com/dalexan9/se_project_todo-app.git
