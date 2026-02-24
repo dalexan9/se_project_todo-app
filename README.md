@@ -1,5 +1,5 @@
 # Simple Todo App
-A Todo add that helps you made lists.
+A Todo app that helps you made lists.
 ## Functionality
 
 You can add tasks, delete, set a certain date and check your todos off.
