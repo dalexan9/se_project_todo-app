@@ -14,4 +14,4 @@ HTML, CSS, Javascript
 
 This project is deployed on GitHub Pages:
 
-https://dalexan9.github.io/se_project_todo-app/
+- https://github.com/dalexan9/se_project_todo-app.git
