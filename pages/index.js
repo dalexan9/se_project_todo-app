@@ -91,7 +91,7 @@ const section = new Section({
       section.addItem(todoElement);
     }
   },
-  containerSelector: ".todo__list",
+  containerSelector: ".todos__list",
 });
 
 section.renderItems();
