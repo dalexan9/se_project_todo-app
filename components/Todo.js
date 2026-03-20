@@ -45,7 +45,7 @@ class Todo {
 
     const todoNameEl = this._todoElement.querySelector(".todo__name");
     this._todoDate = this._todoElement.querySelector(".todo__date");
-    this._DeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
+    this._deleteBtn = this._todoElement.querySelector(".todo__delete-btn");
 
     todoNameEl.textContent = this._data.name;
 

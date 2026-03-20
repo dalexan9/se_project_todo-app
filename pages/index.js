@@ -10,8 +10,7 @@ import Section from "../components/Section.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
-const addTodoForm = addTodoPopupEl.querySelector(".popup__form");
-
+const addTodoForm = document.forms["add-todo-form"];
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
 
 const addTodoPopup = new PopupWithForm({
@@ -23,11 +22,14 @@ const addTodoPopup = new PopupWithForm({
     const date = new Date(dateInput);
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
+    const renderTodo = (item) => {
+      const todo = generateTodo(item);
+      todoList.append(todo);
+    };
+
     const id = uuidv4();
     const todoData = { name, date, id };
-    const todoElement = generateTodo(todoData);
-    section.addItem(todoElement);
-    addTodoForm.reset();
+    renderTodo(todoData);
     todoCounter.updateTotal(true);
 
     newTodoValidator.resetValidation();
@@ -86,7 +88,7 @@ const generateTodo = (data) => {
 const section = new Section({
   items: initialTodos,
   renderer: (item) => {
-    const todoElement = generateTodo(item);
+    renderTodo(item);
     if (todoElement) {
       section.addItem(todoElement);
     }
