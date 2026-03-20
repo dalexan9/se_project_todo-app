@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
-import { initialTodos, validationConfig } from "../utils/constant.js";
+import { initialtodo, validationConfig } from "../utils/constants.js";
 
 import Todo from "../components/Todo.js";
 import FormValidator from "../components/FormValidator.js";
@@ -11,8 +11,8 @@ import Section from "../components/Section.js";
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopupEl.querySelector(".popup__form");
-const todosList = document.querySelector(".todos__list");
-const todoCounter = new TodoCounter(initialTodos, ".counter__text");
+
+const todoCounter = new TodoCounter(initialtodo, ".counter__text");
 
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
@@ -84,14 +84,14 @@ const generateTodo = (data) => {
 };
 
 const section = new Section({
-  items: initialTodos,
+  items: initialtodo,
   renderer: (item) => {
     const todoElement = generateTodo(item);
     if (todoElement) {
       section.addItem(todoElement);
     }
   },
-  containerSelector: ".todos__list",
+  containerSelector: ".todo__list",
 });
 
 section.renderItems();
