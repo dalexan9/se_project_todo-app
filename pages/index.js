@@ -13,6 +13,11 @@ const addTodoPopupEl = document.querySelector("#add-todo-popup");
 const addTodoForm = document.forms["add-todo-form"];
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
 
+const renderTodo = (item) => {
+  const todo = generateTodo(item);
+  return todo;
+};
+
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: (values) => {
@@ -88,7 +93,8 @@ const generateTodo = (data) => {
 const section = new Section({
   items: initialTodos,
   renderer: (item) => {
-    renderTodo(item);
+    const todoElement = renderTodo(item);
+    console.log(todoElement);
     if (todoElement) {
       section.addItem(todoElement);
     }

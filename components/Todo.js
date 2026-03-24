@@ -7,7 +7,7 @@ class Todo {
   }
   _setEventListeners() {
     this._checkboxEl.addEventListener("change", () => {
-      this._data.completed = this._checkboxEl.checked;
+      this._data.completed = this._checkboxEl.completed;
       this._handleCheck(this._data);
     });
 
@@ -19,7 +19,7 @@ class Todo {
   _generateCheckboxEl() {
     this._checkboxEl = this._todoElement.querySelector(".todo__completed");
     this._todoLabel = this._todoElement.querySelector(".todo__label");
-    this._checkboxEl.checked = this._data.completed;
+    this._checkboxEl.checked = this._data.checked;
     this._checkboxEl.id = `todo-${this._data.id}`;
     this._todoLabel.setAttribute("for", `todo-${this._data.id}`);
   }
