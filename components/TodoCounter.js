@@ -8,18 +8,18 @@ class TodoCounter {
 
   updateCompleted = (increment) => {
     if (increment) {
-      this._completed++;
+      this._completed += 1;
     } else {
-      this._completed--;
+      this._completed -= 1;
     }
     this._updateText();
   };
 
   updateTotal = (increment) => {
     if (increment) {
-      this._total++;
+      this._total += 1;
     } else {
-      this._total--;
+      this._total -= 1;
     }
     this._updateText();
   };
